@@ -1,0 +1,109 @@
+$TabBarHeight: 35px;
+$TabBarBorderColor: #000;
+$TabBorderColorRight: #5c5d60;
+$TabPadding: 0 15px;
+$TabTitlePaddingRight: 25px;
+$TabFont: Courier,
+"SF Mono",
+verdana;
+$ConsoleFont: Courier,
+"SF Mono",
+verdana;
+$ConsoleContentPadding: 10px;
+#console-holder {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 1) 0%, rgba(27, 29, 28, 1) 100%);
+    #console-tabs {
+        font-family: $TabFont;
+        a {
+            text-decoration: none;
+        }
+        >ul {
+            border-bottom: 1px solid $TabBarBorderColor;
+            display: block;
+            overflow: hidden;
+            height: $TabBarHeight;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgba(39, 40, 42, 1) 0%, rgba(35, 36, 38, 1) 100%);
+            >li {
+                padding: $TabPadding;
+                display: block;
+                float: left;
+                height: $TabBarHeight;
+                line-height: $TabBarHeight;
+                border-right: 1px solid $TabBorderColorRight;
+                &.active-console {
+                    background: linear-gradient(180deg, rgba(56, 57, 59, 1) 0%, rgba(50, 51, 53, 1) 100%);
+                    a {
+                        color: #fff;
+                    }
+                }
+                a {
+                    color: #9b9c9e;
+                    font-size: 0.75rem;
+                }
+                >a:first-child {
+                    padding-right: $TabTitlePaddingRight;
+                }
+                >a:last-child {
+                    visibility: hidden;
+                }
+                &:hover>a:last-child {
+                    visibility: visible;
+                }
+            }
+        }
+        >a {
+            position: absolute;
+            display: block;
+            right: 0;
+            padding: $TabPadding;
+            height: $TabBarHeight;
+            line-height: $TabBarHeight;
+            text-align: center;
+            color: #666566;
+            font-size: 1.5rem;
+            border-left: 1px solid $TabBorderColorRight;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    #console-content {
+        height: 100%;
+        margin-bottom: -($TabBarHeight);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-family: $ConsoleFont;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        #console-output {
+            padding: $ConsoleContentPadding $ConsoleContentPadding 0 $ConsoleContentPadding;
+            div {
+                white-space: pre-line;
+            }
+        }
+        #console-input {
+            padding: 0 $ConsoleContentPadding $ConsoleContentPadding $ConsoleContentPadding;
+            >span {
+                position: absolute;
+                z-index: 00;
+            }
+            >input {
+                border: 0;
+                background: transparent;
+                font-family: $ConsoleFont;
+                font-size: 0.9rem;
+                line-height: 1.2rem;
+                color: #fff;
+                text-indent: 15px;
+                outline: none;
+            }
+        }
+    }
+}

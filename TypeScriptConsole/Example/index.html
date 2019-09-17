@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TypeScript Console</title>
+    <link rel="stylesheet" href="../../dist/css/style.css">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #console-container {
+            width: 90vw;
+            height: 90vh;
+            margin: 5vh auto 0 auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 3px groove gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="console-container">
+
+        <!-- To be generated -->
+        <div id="console-holder">
+            <div id="console-tabs">
+                <a href="">+</a>
+
+                <ul>
+                    <li class="active-console">
+                        <a href="">Console #1</a>
+                        <a href="">X</a>
+                    </li>
+                    <li>
+                        <a href="">Console #2</a>
+                        <a href="">X</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="console-content">
+                <div id="console-output">
+                    <div>Welcome to the console!</div>
+                    <div>Typ one of the commands to start, or <em>help</em> to get a list of all available functions.</div>
+                </div>
+                <div id="console-input">
+                    <span>&gt;</span>
+                    <input type="text" autofocus>
+                </div>
+            </div>
+        </div>
+        <!-- /To be generated -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#console-content').on('click', function() {
+                $('#console-content').find('input[type=text]:visible').focus();
+            });
+        });
+    </script>
+</body>
+
+</html>

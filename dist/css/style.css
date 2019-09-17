@@ -1,0 +1,78 @@
+#console-holder {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  background: linear-gradient(180deg, #1c1c1c 0%, #1b1d1c 100%); }
+  #console-holder #console-tabs {
+    font-family: Courier, "SF Mono", verdana; }
+    #console-holder #console-tabs a {
+      text-decoration: none; }
+    #console-holder #console-tabs > ul {
+      border-bottom: 1px solid #000;
+      display: block;
+      overflow: hidden;
+      height: 35px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #27282a 0%, #232426 100%); }
+      #console-holder #console-tabs > ul > li {
+        padding: 0 15px;
+        display: block;
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        border-right: 1px solid #5c5d60; }
+        #console-holder #console-tabs > ul > li.active-console {
+          background: linear-gradient(180deg, #38393b 0%, #323335 100%); }
+          #console-holder #console-tabs > ul > li.active-console a {
+            color: #fff; }
+        #console-holder #console-tabs > ul > li a {
+          color: #9b9c9e;
+          font-size: 0.75rem; }
+        #console-holder #console-tabs > ul > li > a:first-child {
+          padding-right: 25px; }
+        #console-holder #console-tabs > ul > li > a:last-child {
+          visibility: hidden; }
+        #console-holder #console-tabs > ul > li:hover > a:last-child {
+          visibility: visible; }
+    #console-holder #console-tabs > a {
+      position: absolute;
+      display: block;
+      right: 0;
+      padding: 0 15px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      color: #666566;
+      font-size: 1.5rem;
+      border-left: 1px solid #5c5d60; }
+      #console-holder #console-tabs > a:hover {
+        color: #fff; }
+  #console-holder #console-content {
+    height: 100%;
+    margin-bottom: -35px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: Courier, "SF Mono", verdana;
+    font-size: 0.9rem;
+    line-height: 1.2rem; }
+    #console-holder #console-content #console-output {
+      padding: 10px 10px 0 10px; }
+      #console-holder #console-content #console-output div {
+        white-space: pre-line; }
+    #console-holder #console-content #console-input {
+      padding: 0 10px 10px 10px; }
+      #console-holder #console-content #console-input > span {
+        position: absolute;
+        z-index: 00; }
+      #console-holder #console-content #console-input > input {
+        border: 0;
+        background: transparent;
+        font-family: Courier, "SF Mono", verdana;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        color: #fff;
+        text-indent: 15px;
+        outline: none; }
